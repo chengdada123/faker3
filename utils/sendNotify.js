@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@chengdada123 
-chengdada123
-/
-faker3
-Public
-forked from shufflewzc/faker3
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-faker3/sendNotify.js /
-@chengdada123
-chengdada123 Update sendNotify.js
-Latest commit f3fe2ea 14 minutes ago
- History
- 2 contributors
-@shufflewzc@chengdada123
-2766 lines (2515 sloc)  110 KB
-   
 /*
  * @Author: lxk0301 https://gitee.com/lxk0301
  * @Date: 2020-08-19 16:12:40
@@ -2794,16 +2764,3 @@ function Env(t, s) {
         }
     })(t, s);
 }
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

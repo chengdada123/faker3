@@ -7,7 +7,7 @@
  * @param text 通知头
  * @param desp 通知体
  * @param params 某些推送通知方式点击弹窗可跳转, 例：{ url: 'https://abc.com' }
- * @param author 作者仓库等信息  例：`本通知 By：https://github.com/whyour/qinglong`
+ * @param 作者仓库等信息  例：`本通知 By：https://github.com/whyour/qinglong`
  */
 //详细说明参考 https://github.com/ccwav/QLScript2.
 const querystring = require('querystring');
@@ -166,7 +166,7 @@ let isLogin = false;
 if (process.env.NOTIFY_SHOWNAMETYPE) {
     ShowRemarkType = process.env.NOTIFY_SHOWNAMETYPE;
 }
-async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By ccwav Mod') {
+async function sendNotify(text, desp, params = {}, author = '') {
     console.log(`开始发送通知...`);
     try {
         //Reset 变量
@@ -1326,7 +1326,7 @@ async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By cc
     }
 
     //提供6种通知
-    desp = buildLastDesp(desp, author)
+    desp = buildLastDesp(desp)
 
         await serverNotify(text, desp); //微信server酱
 
@@ -1439,7 +1439,7 @@ function getRemark(strRemark) {
     }
 }
 
-async function sendNotifybyWxPucher(text, desp, PtPin, author = '\n\n本通知 By ccwav Mod', strsummary = "") {
+async function sendNotifybyWxPucher(text, desp, PtPin, author = '', strsummary = "") {
 
     try {
         var Uid = "";
@@ -1929,9 +1929,9 @@ function buildLastDesp(desp, author = '') {
         return desp.trim();
     } else {
         if (!author.match(/本通知 By/)) {
-            author = `\n\n本通知 By ${author}`
+            author = ``
         }
-        return desp.trim() + author + "\n通知时间: " + GetDateTime(new Date());
+        return desp.trim() + "\n通知时间: " + GetDateTime(new Date());
     }
 }
 
@@ -2006,7 +2006,7 @@ function qywxamNotify(text, desp) {
                             articles: [{
                                     title: `${text}`,
                                     thumb_media_id: `${QYWX_AM_AY[4]}`,
-                                    author: `智能助手`,
+                                    author: ``,
                                     content_source_url: ``,
                                     content: `${html}`,
                                     digest: `${desp}`,
@@ -2293,6 +2293,49 @@ function wxpusherNotify(text, desp) {
             };
             const options = {
                 url: `http://wxpusher.zjiecode.com/api/send/message`,
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 body: JSON.stringify(body),
                 headers: {
                     "Content-Type": "application/json",
